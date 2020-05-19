@@ -17,17 +17,8 @@
 
         <!-- costruisco il template che mi servera per inserire i messaggi da parte dell utente tramite javascritp con la libreria handlebars -->
         <script id="entry-template" type="text/x-handlebars-template">
-                <div class="messaggio {{classe}}">
-                    <li class="nuovo-messaggio">{{nuovomessaggio }}</li>
-                    <span class="orario-mes-inviati">09.00</span>
-                    <div class="message-options-panel">
-    					<div class="message-info">Info messaggio</div>
-    					<div class="message-destroy">Cancella messaggio</div>
-    				</div>
-                </div>
-
+                <div class="quadratino {{classe}}">{{numero}}</div>
         </script>
-
         <script src="main.js" charset="utf-8"></script>
     </body>
 </html>

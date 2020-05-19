@@ -24,9 +24,17 @@ body{
     background-color: lightgray;
 }
 
+/* stilizzo i quadrati che compongono la griglia */
 .quadratino{
     width: calc(100% / 6);
     height: calc(100% / 6);
     border: 1px solid black;
     float: left;
+    cursor: pointer;
+}
+.giallo{
+    background-color: yellow;
+}
+.verde{
+    background-color: green;
 }
