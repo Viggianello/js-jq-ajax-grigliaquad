@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.template{
+    display: none;
+}
+
+
+body{
+    background-color: gray;
+    padding-bottom: 3vh;
+}
+
+.body-header{
+    background-color: darkgreen;
+    height: 20vh;
+    width: 100%;
+    padding-top: 3vh;
+}
+
+.container {
+    width: 900px;
+    height: 94vh;
+    margin: auto;
+    background-color: lightgray;
+}
+
+i{
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.left{
+    float: left;
+    height: 100%;
+    width: 35%;
+    /* border: 1px solid black; */
+    border-right: 0;
+}
+
+.right{
+    float: left;
+    height: 100%;
+    width: 65%;
+    /* border: 1px solid black; */
+}
+
+/* fine regole generali */
+
+.header-left,.header-right, .notifiche, .footer-right,.input-container{
+    position: relative;
+    height: 10%;
+    /* height: 9%; */
+    /* border: 1px solid black; */
+}
+
+.chat{
+    height: 90%;
+    /* border: 1px solid black; */
+}
+
+.right .chat{
+    height: 80%;
+    background-image: url(img/sfondochat.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    overflow-y: scroll;
+    /* height: 82%; */
+    /* border: 1px solid black; */
+}
+
+img{
+    border-radius: 50%;
+    padding: 4px;
+    height: 100%;
+    float: left;
+}
+
+.liste-chat{
+    height: 80%;
+    /* height: 83%; */
+    overflow-y: scroll;
+}
+
+.riga{
+    position: relative;
+    width: 100%;
+    height: calc(100% / 9);
+    cursor: pointer;
+    /* height: 49.7px; */
+    /* border: 1px solid black; */
+}
+
+.left .liste-chat, .left .input-container, .footer-right{
+    background-color: white;
+}
+
+.icone-container,.icone-container-right{
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icone-container-right{
+    width: 35.5px;
+}
+
+.icone-container-left{
+    float: left;/* l ho messo perche se no mi andava a capo l'icona di dx essendo i div elementi blocco?  */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 31px;
+}
+
+.notifiche{
+    padding: 5px;
+    background-color: lightskyblue;
+}
+
+.circle{
+    height: 40px;
+    /* height: 37px; */
+    width: 40px;
+    /* width: 37px; */
+    border-radius: 50%;
+    background-color: white;
+    padding-top: 2px;
+}
+
+.input-container input{
+    height: 96%;
+    width: 98%;
+    padding-left: 35px;
+    border: 0;
+}
+
+.footer-right input{
+    width: calc(100% - 66.5px);
+    height: 96%;
+    border: 0;
+    background-color: #f6f6f6;
+}
+
+.position{
+    position: absolute;
+}
+
+.notifiche .circle, .notifiche h1, .notifiche a{
+    float: left;
+}
+
+.notifiche h1{
+    font-size: 15px;
+    padding-left: 4px;
+}
+
+.notifiche a{
+    padding-left: 4px;
+    font-size: 13px;
+}
+
+.header-left h1{
+    position: absolute;
+    font-size: 30px;
+    left: 70px;
+    bottom: 15px;
+}
+/* layout riga in liste chat */
+.riga ::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.img-container, .testo-riga, .orario-riga{
+    float: left;
+    height: 100%;
+}
+
+.img-container,.orario-riga{
+    width: 10%;
+}
+
+.testo-riga{
+    width: 75%;
+    padding-left: 15px;
+}
+
+.testo-riga p, .orario-riga{
+    font-size: 10px;
+    color: gray;
+}
+
+/* .riga p{
+    float:right;
+    padding-right: 138px;
+    padding-top: 25px;
+    font-size: 10px;
+    color: gray;
+} */
+
+/* .riga h1{
+    position: absolute;
+    padding-left: 47px;
+    font-size: 15px;
+} */
+
+/* .liste-chat .orario{
+    position: absolute;
+    font-size: 10px;
+    color: gray;
+    padding-top: 13px;
+    left: 275px;
+} */
+/* fine layout riga in liste chat */
+h3{
+    float:left;
+    padding-top: 16px;
+}
+
+.lista-messaggi{
+    float: left;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.nuovo-messaggio{
+    /* content: ""; */
+    /* display: table; */
+    clear: both;
+}
+
+.messaggio.inviato{
+    background-color: lightgreen;
+    /* align-self: flex-end; */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    min-width: 150px;
+    min-height: 15px;
+    float:right;
+    clear:both; /*per farli andare a capo e non tutti in riga */
+    cursor: pointer;
+    position: relative;
+    /* per limitare il messaggio al massimo della grandezza della chat per poi andare a capo */
+    max-width: 90%;
+    /* per farlo andare a capo */
+    overflow-wrap: anywhere;
+}
+
+.messaggio.ricevuto{
+    float:left;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    clear:both; /*per farli andare a capo e non tutti in riga */
+    cursor: pointer;
+    position: relative;
+    /* per limitare il messaggio al massimo della grandezza della chat per poi andare a capo */
+    max-width: 90%;
+    /* per farlo andare a capo */
+    overflow-wrap: anywhere;
+}
+
+.orario-mes-inviati{
+    font-size: 10px;
+    color: gray;
+    position:absolute;
+    right: 8px;
+}
+.message-info{
+    padding-bottom:5px;
+}
+
+.lista-messaggi{
+    display: none;
+}
+
+.lista-messaggi.active, .message-options-panel.active{
+    display: block;
+}
+
+.message-options {
+	display: none;
+	color: #B6B9BB;
+	cursor: pointer;
+}
+
+.message-options-panel {
+	display: none;
+	position: absolute;
+	width: 170px;
+    padding: 10px;
+	/* height: 80px; */
+	background: white;
+    border: 1px solid gray;
+	box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.75);
+    right: 40px;
+    cursor: pointer;
+}
+
+/* allineo il dropdown dei messaggi ricevuti(per ora l'ok del pc) */
+.ricevuto .message-options-panel{
+    left: 40px;
+    top: 45px;
+}

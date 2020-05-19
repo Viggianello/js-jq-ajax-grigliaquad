@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Boolzap</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="body-header">
+            <div class="container">
+                <div class="left">
+                    <div class="header-left active">
+                        <span class="img-container">
+                            <img src="img/io.jpg" alt="">
+                        </span>
+                        <h1>Antonello</h1>
+                        <span class="icone-container">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                    </div>
+
+                    <section class="chat">
+                        <div class="notifiche">
+                            <div class="circle">
+                                <i class="far fa-bell-slash"></i>
+                            </div>
+                            <h1>Ricevi notifiche di nuovi messaggi</h1>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+
+                        <div class="input-container">
+                            <i class=" position fas fa-search"></i>
+                            <input type="text" name="" placeholder="Cerca o inivia una nuova chat">
+                        </div>
+
+                        <div class="liste-chat">
+                            <div class="riga">
+                                <span class="img-container">
+                                    <img src="img/michele.jpg" alt="">
+                                </span>
+                                <span class="testo-riga">
+                                    <h1>Michele</h1>
+                                    <!-- paragrafo javascript -->
+                                </span>
+                                <span class="orario-riga">
+                                    <!-- orario javascript -->
+                                </span>
+                                <!-- inseriti con Javascript -->
+                                <!-- <p>Non poteva essere altrimenti</p> -->
+                                <!-- <span class="orario">17.55</span> -->
+                            </div>
+                            <div class="riga">
+                                <span class="img-container">
+                                    <img src="img/davide.jpg" alt=""></span>
+                                <span class="testo-riga">
+                                    <h1>Davide</h1>
+                                </span>
+                                <span class="orario-riga"></span>
+                            </div>
+                            <div class="riga">
+                                <span class="img-container">
+                                    <img src="img/fabio.jpg" alt="">
+                                </span>
+                                <span class="testo-riga">
+                                    <h1>Fabio</h1>
+                                </span>
+                                <span class="orario-riga"></span>
+                            </div>
+                            <div class="riga">
+                                <span class="img-container">
+                                    <img src="img/alessandroB.jpg" alt="">
+                                </span>
+                                <span class="testo-riga">
+                                    <h1>Alessandro B.</h1>
+                                </span>
+                                <span class="orario-riga"></span>
+                            </div>
+                            <div class="riga">
+                                <span class="img-container">
+                                    <img src="img/alessandroL.jpg" alt="">
+                                </span>
+                                <span class="testo-riga">
+                                    <h1>Alessandro L.</h1>
+                                </span>
+                                <span class="orario-riga"></span>
+                            </div>
+                            <div class="riga">
+                                <span class="img-container">
+                                    <img src="img/francesca.jpg" alt="">
+                                </span>
+                                <span class="testo-riga">
+                                    <h1>Francesca</h1>
+                                </span>
+                                <span class="orario-riga"></span>
+                            </div>
+                            <div class="riga">
+                                <span class="img-container">
+                                    <img src="img/marco.jpg" alt="">
+                                    </span>
+                                <span class="testo-riga">
+                                    <h1>Marco</h1>
+                                </span>
+                                <span class="orario-riga"></span>
+                            </div>
+                            <div class="riga">
+                                <span class="img-container">
+                                    <img src="img/marzia.png" alt="">
+                                </span>
+                                <span class="testo-riga">
+                                    <h1>Marzia</h1>
+                                </span>
+                                <span class="orario-riga"></span>
+                            </div>
+                            <!-- <div class="riga"><span class="img-container"><img src="img/samuele.jpg" alt=""></span></div> -->
+                        </div>
+
+                    </section>
+
+                </div>
+                <div class="right">
+                    <div class="header-right active">
+                        <span class="img-container"><img src="img/michele.jpg" alt=""></span>
+                        <h3>Michele</h3>
+                        <span class="icone-container">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                    </div>
+
+                    <section class="chat">
+                        <ul class="lista-messaggi active" data-chat-name="Michele">
+                        </ul>
+                        <ul class="lista-messaggi" data-chat-name="Davide"></ul>
+                        <ul class="lista-messaggi" data-chat-name="Fabio"></ul>
+                        <ul class="lista-messaggi" data-chat-name="Alessandro B."></ul>
+                        <ul class="lista-messaggi" data-chat-name="Alessandro L."></ul>
+                        <ul class="lista-messaggi" data-chat-name="Francesca"></ul>
+                        <ul class="lista-messaggi" data-chat-name="Marco"></ul>
+                        <ul class="lista-messaggi" data-chat-name="Marzia"></ul>
+                    </section>
+
+                    <div class="footer-right">
+                        <div class="icone-container-left">
+                            <i class="far fa-smile"></i>
+                        </div>
+                        <input type="text" id="input-messaggi" placeholder="Scrivi un messaggio">
+                        <div class="icone-container-right">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- costruisco il template che mi servera per inserire i messaggi da parte dell utente tramite javascritp -->
+        <div class="template">
+            <div class="messaggio">
+                <li class="nuovo-messaggio">nuovo messaggio </li>
+                <span class="orario-mes-inviati">09.00</span>
+                <div class="message-options-panel">
+					<div class="message-info">Info messaggio</div>
+					<div class="message-destroy">Cancella messaggio</div>
+				</div>
+            </div>
+
+        </div>
+
+        <!-- costruisco il template che mi servera per inserire i messaggi da parte dell utente tramite javascritp con la libreria handlebars -->
+        <script id="entry-template" type="text/x-handlebars-template">
+                <div class="messaggio {{classe}}">
+                    <li class="nuovo-messaggio">{{nuovomessaggio }}</li>
+                    <span class="orario-mes-inviati">09.00</span>
+                    <div class="message-options-panel">
+    					<div class="message-info">Info messaggio</div>
+    					<div class="message-destroy">Cancella messaggio</div>
+    				</div>
+                </div>
+
+        </script>
+
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
