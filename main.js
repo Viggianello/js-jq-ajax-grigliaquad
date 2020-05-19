@@ -1,51 +1,8 @@
-//metodo 1
- // $('.riga').each(function () {
-//     $(this).append('<p>Non poteva essere altrimenti</p>')
-// })
-// metodo 2
+
 $('.riga .testo-riga').append('<p>Non poteva essere altrimenti</p>')
 var d = new Date();
 var orario = d.getHours() + ':' + d.getMinutes();
 $('.riga .orario-riga').append('<span class="orario"> ' + orario + '</span>')
-// var ok = false;
-// Intercetto il clicco sul microfono
-// $('.icone-container-right').click(function() {
-//     // leggo il valore destritto inserito nel input
-//     var messaggio_utente = $('#input-messaggi').val();
-//     // stampo in console
-//     console.log(messaggio_utente);
-//     var ilMioNuovoMessaggio = $('.template .nuovo-messaggio').clone().addClass('inviato');
-//     ilMioNuovoMessaggio.text(messaggio_utente);
-//     $('.lista-messaggi').append(ilMioNuovoMessaggio);
-//     $('#input-messaggi').val('');
-//     $(this).attr('placeholder', 'Scrivi un messaggio');
-//     ok = true;
-//     var testo_default = $('#input-messaggi').attr('placeholder', 'Scrivi un messaggio');
-// });
-
-// if (ok) {
-    // rinposto il messaggio di testo_default
-//     var testo_default = $('#input-messaggi').attr('placeholder', 'Scrivi un messaggio');
-// }
-
-// inposto un controllo per l'input
-// var controllo_testo_default = true;
-// Creo una funzione al click dell'input
-// $('#input-messaggi').click(function() {
-    // entra se è il un click dispari sul input
-    // if (controllo_testo_default == true) {
-        // tiro via il messaggio di default sull input
-        // var testo_default = $(this).attr('placeholder', '');
-        // inposto il controllo a false cosi poi posso ristabilire la condizione di partenza a un click pari
-        // controllo_testo_default = false;
-    // }
-    // else {
-        // il click sul punsante è pari dunque ristabilisco il messaggio di default
-        // var testo_default = $(this).attr('placeholder', 'Scrivi un messaggio');
-        // inposto il controllo a true cosi poi posso levare ancora il messaggio di default ad un click dispari
-        // controllo_testo_default = true;
-    // }
-// });
 
 // se uso il tasto invio quando sono sull input messaggi
 $('#input-messaggi').keypress(function(event){
@@ -167,34 +124,6 @@ $('.chat').on('mouseleave','.message-options-panel',function() {
   $( this ).removeClass('active');
 });
 
-// function InviaRiceviMessagio() {
-//     // leggo il valore destritto inserito nel input
-//     var messaggio_utente = $('#input-messaggi').val();
-//     // stampo in console
-//     // console.log(messaggio_utente);
-//     // verifico che il mesaggio non sia vuoto
-//     if (messaggio_utente != ('')) {
-//         var ilMioNuovoMessaggio = $('.template .messaggio').clone().addClass('inviato');
-//         ilMioNuovoMessaggio.find('li').text(messaggio_utente);
-//         // metto il selettore con l active se no mi mette il messaggio su tutte le chat anche quelle a cui non starei mandando un messaggio
-//         $('.lista-messaggi.active').append(ilMioNuovoMessaggio);
-//         // resetto l'input
-//         $('#input-messaggi').val('');
-//         // rimetto il messaggio di default
-//         $(this).attr('placeholder', 'Scrivi un messaggio');
-//         // var pcmessaggio = $('.lista-messaggi').append('<li class="messaggio-ricevuto">' + 'ok' + '</li>');
-//         setTimeout(function(){
-//             // metto un messaggio di risposta ok ad ogni messaggio dell'utente che apparirà dopo un secondo
-//             // copio il template e gli aggiungo la classe ricevuto per farlo bianco e a sx
-//             var pcmessaggio = $('.template .messaggio').clone().addClass('ricevuto');
-//             // cambio il suo testo
-//             pcmessaggio.find('li.nuovo-messaggio').replaceWith('<li class="nuovo-messaggio">' + 'ok' + '</li>');
-//             // lo metto in pagina
-//             $('.lista-messaggi.active').append(pcmessaggio)
-//         }, 1000);
-//     }// chiudo l'if controllo input diverso da stringa vuota
-// }// chiudo la funzione
-
 // inserisco tramite la libreria handlebars i messaggi inviati dall utente
 var libreriamessaggio = $('#entry-template').html();
 var template_function = Handlebars.compile(libreriamessaggio);
@@ -243,3 +172,7 @@ function InviaRiceviMessaggioLibreria() {
 // Se il numero restituito dall'api è <= 5, il quadrato su cui l'utente ha cliccato diventa giallo; se invece il numero restituito dall'api è > 5, il quadrato su cui l'utente ha cliccato diventa verde.
 // In entrambi i casi, andiamo ad inserire nel quadrato il numero restituito dall'api.
 // BONUS: generare la griglia in jQuery utilizzando handlebars :wink:
+// creo 36 quadratini che mi faranno la griglia 6x6
+for (var i = 0; i < 36; i++) {
+    $('.griglia').append('<div class="quadratino"></div>')
+}
